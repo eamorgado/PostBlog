@@ -1,4 +1,21 @@
 {% extends "layout.html" %} 
 {% block content %}
-<h1>About Page</h1>
+    <h1>About Page</h1>
+    <article class="media content-section">
+        <div class="media-body">
+            <div>
+                <h2 class="article-title">The site</h2>
+                <p class="article-content">This site allows a user to create and delete posts as well as accounts. Each post has the date of posting, a title and an author.</p>
+                <p class="article-content">Posts are editable however, only the posts' author can edit its content and title</p>                
+            </div>
+            <div>
+                <h2 class="article-title">The making of the site</h2>
+                <p class="article-content">This site was made using the Python programming language and the Flask extension</p>               
+            </div>
+            <div>
+                <h2 class="article-title">Why was this site made</h2>
+                <p class="article-content">The main reason was to provide a basic training of the skills required to build a next, more advanced project</p>               
+            </div>
+        </div>
+    </article>
 {% endblock content%}

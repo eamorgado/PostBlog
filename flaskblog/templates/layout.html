@@ -8,16 +8,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}"> 
     {% if title %}
-        <title>Flask Blog - {{ title }}</title>
+        <title>Post Blog - {{ title }}</title>
     {% else %}
-        <title>Flask Blog</title>
+        <title>Post Blog</title>
     {% endif %}
 </head>
 <body>
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-                <a class="navbar-brand mr-4" href="/">Flask Blog</a>
+                <a class="navbar-brand mr-4" href="/">Post Blog</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -25,6 +25,7 @@
                     <div class="navbar-nav mr-auto">
                         <a class="nav-item nav-link" href="{{ url_for('main.home') }}">Home</a>
                         <a class="nav-item nav-link" href="{{ url_for('main.about') }}">About</a>
+                        <a class="nav-item nav-link" href="{{ url_for('main.qna') }}">Q&A</a>
                     </div>
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
@@ -57,13 +58,11 @@
             </div>
             <div class="col-md-4">
                 <div class="content-section">
-                    <h3>Our Sidebar</h3>
-                    <p class='text-muted'>You can put any information here you'd like.
+                    <h3>Sidebar</h3>
+                    <p class='text-muted'>For now the sidebar has no functionality.
                         <ul class="list-group">
                             <li class="list-group-item list-group-item-light">Latest Posts</li>
-                            <li class="list-group-item list-group-item-light">Announcements</li>
-                            <li class="list-group-item list-group-item-light">Calendars</li>
-                            <li class="list-group-item list-group-item-light">etc</li>
+                            <li class="list-group-item list-group-item-light">Active Channels</li>
                         </ul>
                     </p>
                 </div>
