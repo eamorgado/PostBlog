@@ -104,3 +104,13 @@ def reset_token(token):
         flash('Your password has been updated! You are now able to log in', 'success')
         return redirect(url_for('users.login'))
     return render_template('reset_token.html', title='Reset Password', form=form)
+
+@users.route("/account/delete", methods=['POST'])
+@login_required
+def delete_account():
+    user = User.query.filter_by(username=current_user.username).first()
+    logout_user()
+    db.session.delete(user)
+    db.session.commit()
+    flash("Account deleted. Sad to see you go :(", 'success')
+    return redirect(url_for('main.home'))
